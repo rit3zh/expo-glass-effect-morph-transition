@@ -1,4 +1,4 @@
-# 🧪 expo-liquid-glass-morph-view
+# 🧪 expo-glass-effect-morph-transition
 
 A **work-in-progress** iOS-only React Native view that brings native glass morphing effects with smooth expand/collapse animations. Fork, tweak, and enjoy!
 
