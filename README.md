@@ -10,6 +10,10 @@ A **work-in-progress** iOS-only React Native view that brings native glass morph
 - ⚡ Adjustable spacing, duration, and styling
 - 🎬 Built-in expand/collapse with `isExpanded` prop
 
+
+https://github.com/user-attachments/assets/9e30733f-30a8-4603-822b-6dfd91e72990
+
+
 ## 🛠️ Installation
 
 1. **Fork** this repo
