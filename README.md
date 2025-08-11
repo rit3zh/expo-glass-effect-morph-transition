@@ -1,50 +1,57 @@
-# Welcome to your Expo app 👋
+# 🧪 expo-liquid-glass-morph-view
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A **work-in-progress** iOS-only React Native view that brings native glass morphing effects with smooth expand/collapse animations. Fork, tweak, and enjoy!
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- 📱 Native iOS glass morph animation
+- 🎯 Supports horizontal / vertical layouts
+- 🖼️ Custom SF Symbols or images for actions
+- ⚡ Adjustable spacing, duration, and styling
+- 🎬 Built-in expand/collapse with `isExpanded` prop
 
-   ```bash
-   npm install
+## 🛠️ Installation
+
+1. **Fork** this repo
+2. Run:
+
+   ```sh
+   pod install
+   pnpm ios
    ```
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## 📦 Props
 
-In the output, you'll find options to open the app in a
+| Prop               | Type                                | Default        | Description                                             |
+| ------------------ | ----------------------------------- | -------------- | ------------------------------------------------------- |
+| `isExpanded`       | `boolean`                           | **required**   | Toggles the expanded/collapsed state of the glass view. |
+| `orientation`      | `"horizontal"` \| `"vertical"`      | `"horizontal"` | Direction in which actions are laid out.                |
+| `actions`          | `GlassAction[]`                     | `[]`           | List of action buttons with icon, color, or image.      |
+| `duration`         | `number`                            | `300`          | Animation duration in milliseconds.                     |
+| `spacing`          | `number`                            | `8`            | Space between each action button.                       |
+| `containerSpacing` | `number`                            | `0`            | Padding between the glass container and actions.        |
+| `onToggle`         | `() => void`                        | `undefined`    | Called when the expand/collapse state is toggled.       |
+| `onActionPress`    | `(event: ActionPressEvent) => void` | `undefined`    | Called when an action button is pressed.                |
+| `style`            | `StyleProp<ViewStyle>`              | `undefined`    | Custom styles for the container.                        |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🚀 Usage
 
-## Get a fresh project
+```tsx
+import { LiquidGlassMorphView } from "~/native-view/LiquidGlassMorphView";
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+<LiquidGlassMorphView
+  isExpanded={true}
+  orientation="horizontal"
+  actions={[{ name: "star.fill", color: "#FFD700" }]}
+  onToggle={() => console.log("Toggled")}
+  onActionPress={(e) => console.log("Pressed action", e)}
+/>;
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## ⚠️ Status
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This is **still WIP** in progress and is likely to change in the future.
